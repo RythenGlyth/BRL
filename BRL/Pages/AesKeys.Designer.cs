@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.Title = new System.Windows.Forms.Label();
-            this.aesKeysBox = new System.Windows.Forms.RichTextBox();
+            this.aesKeysTable = new System.Windows.Forms.TableLayoutPanel();
             this.SuspendLayout();
             // 
             // Title
@@ -44,26 +44,28 @@
             this.Title.Text = "Aes Keys";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
-            // aesKeysBox
+            // aesKeysTable
             // 
-            this.aesKeysBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.aesKeysBox.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.aesKeysBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.aesKeysBox.ForeColor = System.Drawing.Color.White;
-            this.aesKeysBox.Location = new System.Drawing.Point(0, 41);
-            this.aesKeysBox.Name = "aesKeysBox";
-            this.aesKeysBox.ReadOnly = true;
-            this.aesKeysBox.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Horizontal;
-            this.aesKeysBox.Size = new System.Drawing.Size(1156, 594);
-            this.aesKeysBox.TabIndex = 1;
-            this.aesKeysBox.Text = "";
+            this.aesKeysTable.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Outset;
+            this.aesKeysTable.ColumnCount = 2;
+            this.aesKeysTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.aesKeysTable.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.aesKeysTable.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.aesKeysTable.Location = new System.Drawing.Point(0, 41);
+            this.aesKeysTable.Name = "aesKeysTable";
+            this.aesKeysTable.Padding = new System.Windows.Forms.Padding(16);
+            this.aesKeysTable.RowCount = 2;
+            this.aesKeysTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.aesKeysTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.aesKeysTable.Size = new System.Drawing.Size(1156, 594);
+            this.aesKeysTable.TabIndex = 1;
             // 
             // AesKeys
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.Controls.Add(this.aesKeysBox);
+            this.Controls.Add(this.aesKeysTable);
             this.Controls.Add(this.Title);
             this.Name = "AesKeys";
             this.Size = new System.Drawing.Size(1156, 635);
@@ -75,6 +77,6 @@
         #endregion
 
         private System.Windows.Forms.Label Title;
-        private System.Windows.Forms.RichTextBox aesKeysBox;
+        private System.Windows.Forms.TableLayoutPanel aesKeysTable;
     }
 }

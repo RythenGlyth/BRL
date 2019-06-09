@@ -36,12 +36,71 @@ namespace BRL.Pages
                         {
                             string theContent = await content.ReadAsStringAsync();
                             dynamic json = JsonConvert.DeserializeObject(theContent);
-                            aesKeysBox.Text += Convert.ToString(json);
+                            //aesKeysBox.Text += Convert.ToString(json);
+                            Newtonsoft.Json.Linq.JObject additionalKeys = json.additionalKeys;
+                            aesKeysTable.RowCount = additionalKeys.Count + 1;
+
+                            float childheight = 100 / aesKeysTable.RowCount;
+
+
+                            TextBox mainKeyLabel = new TextBox();
+                            mainKeyLabel.ForeColor = Color.White;
+                            mainKeyLabel.Multiline = true;
+                            mainKeyLabel.BackColor = Color.FromArgb(255, 31, 31, 31);
+                            mainKeyLabel.BorderStyle = BorderStyle.None;
+                            mainKeyLabel.ReadOnly = true;
+                            mainKeyLabel.Dock = DockStyle.Fill;
+                            mainKeyLabel.Text = "mainkey";
+                            aesKeysTable.Controls.Add(mainKeyLabel, 0, 0);
+
+                            TextBox mainKeyLabel2 = new TextBox();
+                            mainKeyLabel2.ForeColor = Color.White;
+                            mainKeyLabel2.Multiline = true;
+                            mainKeyLabel2.BackColor = Color.FromArgb(255, 31, 31, 31);
+                            mainKeyLabel2.BorderStyle = BorderStyle.None;
+                            mainKeyLabel2.ReadOnly = true;
+                            mainKeyLabel2.Dock = DockStyle.Fill;
+                            mainKeyLabel2.Text = json.mainKey;
+                            aesKeysTable.Controls.Add(mainKeyLabel2, 1, 0);
+
+                            aesKeysTable.RowStyles.Clear();
+                            aesKeysTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize, childheight));
+
+
+                            int i = 1;
+                            foreach (var x in additionalKeys)
+                            {
+                                aesKeysTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize, childheight));
+
+
+                                TextBox label = new TextBox();
+                                label.ForeColor = Color.White;
+                                label.Multiline = true;
+                                label.BackColor = Color.FromArgb(255, 31, 31, 31);
+                                label.BorderStyle = BorderStyle.None;
+                                label.ReadOnly = true;
+                                label.Dock = DockStyle.Fill;
+                                label.Text = x.Key;
+                                aesKeysTable.Controls.Add(label, 0, i);
+
+                                TextBox label2 = new TextBox();
+                                label2.ForeColor = Color.White;
+                                label2.Multiline = true;
+                                label2.BackColor = Color.FromArgb(255, 31, 31, 31);
+                                label2.BorderStyle = BorderStyle.None;
+                                label2.ReadOnly = true;
+                                label2.Dock = DockStyle.Fill;
+                                label2.Text = x.Value.ToString();
+                                aesKeysTable.Controls.Add(label2, 1, i);
+
+
+                                i++;
+                            }
                         }
 
                     }
                 }
-            } catch(Exception)
+            } catch (Exception)
             {
 
             }
