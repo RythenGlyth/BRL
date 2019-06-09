@@ -51,10 +51,11 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuLabel = new System.Windows.Forms.Label();
             this.PanelContent = new System.Windows.Forms.Panel();
-            this.aesKeys1 = new BRL.Pages.AesKeys();
-            this.itemShop1 = new BRL.Pages.ItemShop();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.aesKeys1 = new BRL.Pages.AesKeys();
+            this.itemShop1 = new BRL.Pages.ItemShop();
             this.HeaderPanel.SuspendLayout();
             this.MenuPanel.SuspendLayout();
             this.PanelSlide.SuspendLayout();
@@ -65,10 +66,12 @@
             this.panel1.SuspendLayout();
             this.PanelContent.SuspendLayout();
             this.mainpanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPanel
             // 
+            this.HeaderPanel.Controls.Add(this.pictureBox1);
             this.HeaderPanel.Controls.Add(this.closeWindowButton);
             this.HeaderPanel.Controls.Add(this.FormLabel);
             this.HeaderPanel.Dock = System.Windows.Forms.DockStyle.Top;
@@ -96,10 +99,10 @@
             // FormLabel
             // 
             this.FormLabel.AutoSize = true;
-            this.FormLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FormLabel.Location = new System.Drawing.Point(12, 4);
+            this.FormLabel.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormLabel.Location = new System.Drawing.Point(38, 2);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(71, 33);
+            this.FormLabel.Size = new System.Drawing.Size(63, 36);
             this.FormLabel.TabIndex = 0;
             this.FormLabel.Text = "BRL";
             this.FormLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
@@ -310,24 +313,6 @@
             this.PanelContent.Size = new System.Drawing.Size(965, 633);
             this.PanelContent.TabIndex = 3;
             // 
-            // aesKeys1
-            // 
-            this.aesKeys1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.aesKeys1.Location = new System.Drawing.Point(0, 0);
-            this.aesKeys1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.aesKeys1.Name = "aesKeys1";
-            this.aesKeys1.Size = new System.Drawing.Size(1156, 635);
-            this.aesKeys1.TabIndex = 1;
-            // 
-            // itemShop1
-            // 
-            this.itemShop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.itemShop1.Location = new System.Drawing.Point(0, 1);
-            this.itemShop1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.itemShop1.Name = "itemShop1";
-            this.itemShop1.Size = new System.Drawing.Size(1156, 635);
-            this.itemShop1.TabIndex = 0;
-            // 
             // mainpanel
             // 
             this.mainpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
@@ -345,6 +330,34 @@
             // 
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            // 
+            // aesKeys1
+            // 
+            this.aesKeys1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.aesKeys1.Location = new System.Drawing.Point(0, 0);
+            this.aesKeys1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.aesKeys1.Name = "aesKeys1";
+            this.aesKeys1.Size = new System.Drawing.Size(1156, 635);
+            this.aesKeys1.TabIndex = 1;
+            // 
+            // itemShop1
+            // 
+            this.itemShop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.itemShop1.Location = new System.Drawing.Point(0, 1);
+            this.itemShop1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.itemShop1.Name = "itemShop1";
+            this.itemShop1.Size = new System.Drawing.Size(1156, 635);
+            this.itemShop1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -377,6 +390,7 @@
             this.panel1.PerformLayout();
             this.PanelContent.ResumeLayout(false);
             this.mainpanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -408,6 +422,7 @@
         private System.Windows.Forms.Panel settingsPanel;
         private System.Windows.Forms.Label settingsLabel;
         private System.Windows.Forms.Panel mainpanel;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
 

@@ -176,6 +176,7 @@ namespace BRL
             }
 
             Close();
+            Application.Exit();
         }
 
         private static String BytesToString(long byteCount)

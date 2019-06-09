@@ -1,4 +1,6 @@
-﻿namespace BRL.Pages
+﻿using System.Drawing.Text;
+
+namespace BRL.Pages
 {
     partial class AesKeys
     {
