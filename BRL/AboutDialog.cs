@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Reflection;
 
 namespace BRL
 {
@@ -76,6 +77,11 @@ namespace BRL
         private void support_discord_Click(object sender, EventArgs e)
         {
             System.Diagnostics.Process.Start("https://discord.gg/x5yxGbr");
+        }
+
+        private void AboutDialog_Load(object sender, EventArgs e)
+        {
+            label_version.Text = "Version " + Assembly.GetEntryAssembly().GetName().Version.ToString();
         }
     }
 }

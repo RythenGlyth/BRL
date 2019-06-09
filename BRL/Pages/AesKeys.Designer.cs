@@ -41,7 +41,7 @@
             this.Title.Name = "Title";
             this.Title.Size = new System.Drawing.Size(1156, 41);
             this.Title.TabIndex = 0;
-            this.Title.Text = "Aes Keys";
+            this.Title.Text = "AES Keys";
             this.Title.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // aesKeysTable

@@ -35,7 +35,9 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.tableLayoutPanel3 = new System.Windows.Forms.TableLayoutPanel();
             this.support_discord = new System.Windows.Forms.Button();
+            this.label_version = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.tableLayoutPanel2 = new System.Windows.Forms.TableLayoutPanel();
@@ -53,6 +55,7 @@
             this.panel1.SuspendLayout();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.tableLayoutPanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             this.tableLayoutPanel2.SuspendLayout();
             this.mainpanel.SuspendLayout();
@@ -103,7 +106,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 40);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(585, 415);
+            this.panel1.Size = new System.Drawing.Size(585, 479);
             this.panel1.TabIndex = 2;
             // 
             // tableLayoutPanel1
@@ -119,19 +122,35 @@
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.56013F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 19.43987F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(585, 415);
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 65.97077F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 34.02923F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(585, 479);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // panel3
             // 
-            this.panel3.Controls.Add(this.support_discord);
+            this.panel3.Controls.Add(this.tableLayoutPanel3);
             this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(3, 337);
+            this.panel3.Location = new System.Drawing.Point(3, 318);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(579, 75);
+            this.panel3.Size = new System.Drawing.Size(579, 158);
             this.panel3.TabIndex = 1;
+            // 
+            // tableLayoutPanel3
+            // 
+            this.tableLayoutPanel3.ColumnCount = 1;
+            this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
+            this.tableLayoutPanel3.Controls.Add(this.support_discord);
+            this.tableLayoutPanel3.Controls.Add(this.label_version);
+            this.tableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel3.Location = new System.Drawing.Point(0, 0);
+            this.tableLayoutPanel3.Name = "tableLayoutPanel3";
+            this.tableLayoutPanel3.RowCount = 2;
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80F));
+            this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(579, 158);
+            this.tableLayoutPanel3.TabIndex = 3;
             // 
             // support_discord
             // 
@@ -140,13 +159,25 @@
             this.support_discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.support_discord.Font = new System.Drawing.Font("Burbank Big Condensed", 20.25F, System.Drawing.FontStyle.Bold);
             this.support_discord.ForeColor = System.Drawing.Color.White;
-            this.support_discord.Location = new System.Drawing.Point(0, 0);
+            this.support_discord.Location = new System.Drawing.Point(3, 3);
             this.support_discord.Name = "support_discord";
-            this.support_discord.Size = new System.Drawing.Size(579, 75);
+            this.support_discord.Padding = new System.Windows.Forms.Padding(5);
+            this.support_discord.Size = new System.Drawing.Size(573, 120);
             this.support_discord.TabIndex = 1;
             this.support_discord.Text = "SupportDiscord";
             this.support_discord.UseVisualStyleBackColor = true;
             this.support_discord.Click += new System.EventHandler(this.support_discord_Click);
+            // 
+            // label_version
+            // 
+            this.label_version.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label_version.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label_version.ForeColor = System.Drawing.Color.White;
+            this.label_version.Location = new System.Drawing.Point(3, 126);
+            this.label_version.Name = "label_version";
+            this.label_version.Size = new System.Drawing.Size(573, 32);
+            this.label_version.TabIndex = 2;
+            this.label_version.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // panel2
             // 
@@ -155,7 +186,7 @@
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(3, 3);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(579, 328);
+            this.panel2.Size = new System.Drawing.Size(579, 309);
             this.panel2.TabIndex = 2;
             // 
             // label1
@@ -172,8 +203,6 @@
             // 
             // tableLayoutPanel2
             // 
-            this.tableLayoutPanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel2.ColumnCount = 2;
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel2.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
@@ -186,7 +215,8 @@
             this.tableLayoutPanel2.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel2.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.rythenglyth_twitter, 0, 1);
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 38);
+            this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 5;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 30F));
@@ -195,7 +225,7 @@
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25F));
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(579, 292);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(579, 309);
             this.tableLayoutPanel2.TabIndex = 0;
             // 
             // brleaks_instagram
@@ -206,9 +236,9 @@
             this.brleaks_instagram.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brleaks_instagram.ForeColor = System.Drawing.Color.White;
             this.brleaks_instagram.Image = ((System.Drawing.Image)(resources.GetObject("brleaks_instagram.Image")));
-            this.brleaks_instagram.Location = new System.Drawing.Point(292, 228);
+            this.brleaks_instagram.Location = new System.Drawing.Point(292, 240);
             this.brleaks_instagram.Name = "brleaks_instagram";
-            this.brleaks_instagram.Size = new System.Drawing.Size(284, 61);
+            this.brleaks_instagram.Size = new System.Drawing.Size(284, 66);
             this.brleaks_instagram.TabIndex = 8;
             this.brleaks_instagram.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.brleaks_instagram.UseVisualStyleBackColor = true;
@@ -223,9 +253,9 @@
             this.rythenglyth_youtube.ForeColor = System.Drawing.Color.White;
             this.rythenglyth_youtube.Image = ((System.Drawing.Image)(resources.GetObject("rythenglyth_youtube.Image")));
             this.rythenglyth_youtube.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.rythenglyth_youtube.Location = new System.Drawing.Point(3, 163);
+            this.rythenglyth_youtube.Location = new System.Drawing.Point(3, 171);
             this.rythenglyth_youtube.Name = "rythenglyth_youtube";
-            this.rythenglyth_youtube.Size = new System.Drawing.Size(283, 59);
+            this.rythenglyth_youtube.Size = new System.Drawing.Size(283, 63);
             this.rythenglyth_youtube.TabIndex = 7;
             this.rythenglyth_youtube.Text = "(German)";
             this.rythenglyth_youtube.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -240,9 +270,9 @@
             this.brleaks_youtube.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brleaks_youtube.ForeColor = System.Drawing.Color.White;
             this.brleaks_youtube.Image = ((System.Drawing.Image)(resources.GetObject("brleaks_youtube.Image")));
-            this.brleaks_youtube.Location = new System.Drawing.Point(292, 163);
+            this.brleaks_youtube.Location = new System.Drawing.Point(292, 171);
             this.brleaks_youtube.Name = "brleaks_youtube";
-            this.brleaks_youtube.Size = new System.Drawing.Size(284, 59);
+            this.brleaks_youtube.Size = new System.Drawing.Size(284, 63);
             this.brleaks_youtube.TabIndex = 6;
             this.brleaks_youtube.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.brleaks_youtube.UseVisualStyleBackColor = true;
@@ -256,9 +286,9 @@
             this.brleaks_discord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.brleaks_discord.ForeColor = System.Drawing.Color.White;
             this.brleaks_discord.Image = ((System.Drawing.Image)(resources.GetObject("brleaks_discord.Image")));
-            this.brleaks_discord.Location = new System.Drawing.Point(292, 98);
+            this.brleaks_discord.Location = new System.Drawing.Point(292, 102);
             this.brleaks_discord.Name = "brleaks_discord";
-            this.brleaks_discord.Size = new System.Drawing.Size(284, 59);
+            this.brleaks_discord.Size = new System.Drawing.Size(284, 63);
             this.brleaks_discord.TabIndex = 5;
             this.brleaks_discord.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.brleaks_discord.UseVisualStyleBackColor = true;
@@ -272,9 +302,9 @@
             this.rythenglyth_discord.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rythenglyth_discord.ForeColor = System.Drawing.Color.White;
             this.rythenglyth_discord.Image = ((System.Drawing.Image)(resources.GetObject("rythenglyth_discord.Image")));
-            this.rythenglyth_discord.Location = new System.Drawing.Point(3, 98);
+            this.rythenglyth_discord.Location = new System.Drawing.Point(3, 102);
             this.rythenglyth_discord.Name = "rythenglyth_discord";
-            this.rythenglyth_discord.Size = new System.Drawing.Size(283, 59);
+            this.rythenglyth_discord.Size = new System.Drawing.Size(283, 63);
             this.rythenglyth_discord.TabIndex = 4;
             this.rythenglyth_discord.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.rythenglyth_discord.UseVisualStyleBackColor = true;
@@ -291,7 +321,7 @@
             this.brleaks_twitter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.brleaks_twitter.Location = new System.Drawing.Point(292, 33);
             this.brleaks_twitter.Name = "brleaks_twitter";
-            this.brleaks_twitter.Size = new System.Drawing.Size(284, 59);
+            this.brleaks_twitter.Size = new System.Drawing.Size(284, 63);
             this.brleaks_twitter.TabIndex = 3;
             this.brleaks_twitter.Text = "BRLeaks_ • Fortnite Leaks";
             this.brleaks_twitter.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -333,7 +363,7 @@
             this.rythenglyth_twitter.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
             this.rythenglyth_twitter.Location = new System.Drawing.Point(3, 33);
             this.rythenglyth_twitter.Name = "rythenglyth_twitter";
-            this.rythenglyth_twitter.Size = new System.Drawing.Size(283, 59);
+            this.rythenglyth_twitter.Size = new System.Drawing.Size(283, 63);
             this.rythenglyth_twitter.TabIndex = 2;
             this.rythenglyth_twitter.Text = "RythenGlyth - Fortnite Leaks";
             this.rythenglyth_twitter.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -348,7 +378,7 @@
             this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.mainpanel.Location = new System.Drawing.Point(0, 0);
             this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(587, 457);
+            this.mainpanel.Size = new System.Drawing.Size(587, 521);
             this.mainpanel.TabIndex = 2;
             // 
             // AboutDialog
@@ -356,18 +386,20 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.ClientSize = new System.Drawing.Size(587, 457);
+            this.ClientSize = new System.Drawing.Size(587, 521);
             this.Controls.Add(this.mainpanel);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AboutDialog";
             this.ShowIcon = false;
             this.Text = "AboutDialog";
+            this.Load += new System.EventHandler(this.AboutDialog_Load);
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.tableLayoutPanel3.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.tableLayoutPanel2.ResumeLayout(false);
             this.mainpanel.ResumeLayout(false);
@@ -384,18 +416,20 @@
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button support_discord;
+        private System.Windows.Forms.Label label_version;
+        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button brleaks_twitter;
-        private System.Windows.Forms.Button rythenglyth_twitter;
-        private System.Windows.Forms.Button rythenglyth_discord;
-        private System.Windows.Forms.Button brleaks_discord;
+        private System.Windows.Forms.Button brleaks_instagram;
         private System.Windows.Forms.Button rythenglyth_youtube;
         private System.Windows.Forms.Button brleaks_youtube;
-        private System.Windows.Forms.Button brleaks_instagram;
-        private System.Windows.Forms.Button support_discord;
+        private System.Windows.Forms.Button brleaks_discord;
+        private System.Windows.Forms.Button rythenglyth_discord;
+        private System.Windows.Forms.Button brleaks_twitter;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button rythenglyth_twitter;
     }
 }
