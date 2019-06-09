@@ -116,9 +116,9 @@
             this.FormLabel.Font = new System.Drawing.Font("Century Gothic", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormLabel.Location = new System.Drawing.Point(38, 2);
             this.FormLabel.Name = "FormLabel";
-            this.FormLabel.Size = new System.Drawing.Size(63, 36);
+            this.FormLabel.Size = new System.Drawing.Size(128, 36);
             this.FormLabel.TabIndex = 0;
-            this.FormLabel.Text = "BRL";
+            this.FormLabel.Text = "BRL Tool";
             this.FormLabel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
             this.FormLabel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseMove);
             // 
@@ -142,6 +142,7 @@
             this.newsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
             this.newsButton.FlatAppearance.BorderSize = 0;
             this.newsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newsButton.Image = ((System.Drawing.Image)(resources.GetObject("newsButton.Image")));
             this.newsButton.Location = new System.Drawing.Point(1, 121);
             this.newsButton.Name = "newsButton";
             this.newsButton.Size = new System.Drawing.Size(43, 34);
@@ -374,7 +375,7 @@
             // itemShop1
             // 
             this.itemShop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.itemShop1.Location = new System.Drawing.Point(0, 1);
+            this.itemShop1.Location = new System.Drawing.Point(0, 0);
             this.itemShop1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.itemShop1.Name = "itemShop1";
             this.itemShop1.Size = new System.Drawing.Size(1156, 635);

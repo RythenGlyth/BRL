@@ -7,7 +7,7 @@
     <ProjectGuid>{1B36E7CF-F793-40BF-9044-A3B515EFA29D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>BRL</RootNamespace>
-    <AssemblyName>BRL</AssemblyName>
+    <AssemblyName>BRL Tool</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>logo-1.ico</ApplicationIcon>
+    <ApplicationIcon>logo-2.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestCertificateThumbprint>78FBA9EE6FD377819ABF7DB2CFB1DC2E4E160698</ManifestCertificateThumbprint>
@@ -157,6 +157,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="logo-1.ico" />
+    <Content Include="logo-2.ico" />
+    <Content Include="Symbol1.ico" />
     <None Include="Resources\ZipExtractor.exe" />
   </ItemGroup>
   <ItemGroup>

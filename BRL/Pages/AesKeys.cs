@@ -38,9 +38,7 @@ namespace BRL.Pages
                             dynamic json = JsonConvert.DeserializeObject(theContent);
                             //aesKeysBox.Text += Convert.ToString(json);
                             Newtonsoft.Json.Linq.JObject additionalKeys = json.additionalKeys;
-                            aesKeysTable.RowCount = additionalKeys.Count + 1;
-
-                            float childheight = 100 / aesKeysTable.RowCount;
+                            aesKeysTable.RowCount = additionalKeys.Count;
 
 
                             TextBox mainKeyLabel = new TextBox();
@@ -51,7 +49,7 @@ namespace BRL.Pages
                             mainKeyLabel.ReadOnly = true;
                             mainKeyLabel.Dock = DockStyle.Fill;
                             mainKeyLabel.Text = "mainkey";
-                            aesKeysTable.Controls.Add(mainKeyLabel, 0, 0);
+                            mainKey.Controls.Add(mainKeyLabel, 0, 0);
 
                             TextBox mainKeyLabel2 = new TextBox();
                             mainKeyLabel2.ForeColor = Color.White;
@@ -61,16 +59,14 @@ namespace BRL.Pages
                             mainKeyLabel2.ReadOnly = true;
                             mainKeyLabel2.Dock = DockStyle.Fill;
                             mainKeyLabel2.Text = json.mainKey;
-                            aesKeysTable.Controls.Add(mainKeyLabel2, 1, 0);
+                            mainKey.Controls.Add(mainKeyLabel2, 1, 0);
 
                             aesKeysTable.RowStyles.Clear();
-                            aesKeysTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize, childheight));
 
-
-                            int i = 1;
+                            int i = 0;
                             foreach (var x in additionalKeys)
                             {
-                                aesKeysTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize, childheight));
+                                aesKeysTable.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.AutoSize, 10));
 
 
                                 TextBox label = new TextBox();
@@ -104,6 +100,11 @@ namespace BRL.Pages
             {
 
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Process.Start("http://benbotfn.tk:8080/api/aes");
         }
     }
 }

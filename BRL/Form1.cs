@@ -91,10 +91,11 @@ namespace BRL
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if(panelSlideHidden)
+
+            if (panelSlideHidden)
             {
                 PanelSlide.Width += 10;
-                if(PanelSlide.Width >= panelSlideWidth)
+                if (PanelSlide.Width >= panelSlideWidth)
                 {
                     timer1.Stop();
                     panelSlideHidden = false;
@@ -149,6 +150,8 @@ namespace BRL
 
         private void newsButton_Click(object sender, EventArgs e)
         {
+            panelSlideHidden = false;
+            menuButton_Click(sender, e);
 
         }
     }
