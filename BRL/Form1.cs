@@ -146,5 +146,10 @@ namespace BRL
             menuButton_Click(sender, e);
 
         }
+
+        private void newsButton_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

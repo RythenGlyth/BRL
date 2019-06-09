@@ -31,15 +31,19 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.HeaderPanel = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.closeWindowButton = new System.Windows.Forms.Button();
             this.FormLabel = new System.Windows.Forms.Label();
             this.MenuPanel = new System.Windows.Forms.Panel();
+            this.newsButton = new System.Windows.Forms.Button();
             this.aesKeyIcon = new System.Windows.Forms.Button();
             this.aboutButton = new System.Windows.Forms.Button();
             this.settingsButton = new System.Windows.Forms.Button();
             this.storeButton = new System.Windows.Forms.Button();
             this.menuButton = new System.Windows.Forms.Button();
             this.PanelSlide = new System.Windows.Forms.Panel();
+            this.newsPanel = new System.Windows.Forms.Panel();
+            this.newsLabel = new System.Windows.Forms.Label();
             this.aboutPanel = new System.Windows.Forms.Panel();
             this.aboutLabel = new System.Windows.Forms.Label();
             this.settingsPanel = new System.Windows.Forms.Panel();
@@ -51,14 +55,15 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuLabel = new System.Windows.Forms.Label();
             this.PanelContent = new System.Windows.Forms.Panel();
-            this.mainpanel = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.aesKeys1 = new BRL.Pages.AesKeys();
             this.itemShop1 = new BRL.Pages.ItemShop();
+            this.mainpanel = new System.Windows.Forms.Panel();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.HeaderPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuPanel.SuspendLayout();
             this.PanelSlide.SuspendLayout();
+            this.newsPanel.SuspendLayout();
             this.aboutPanel.SuspendLayout();
             this.settingsPanel.SuspendLayout();
             this.aesKeyPanel.SuspendLayout();
@@ -66,7 +71,6 @@
             this.panel1.SuspendLayout();
             this.PanelContent.SuspendLayout();
             this.mainpanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // HeaderPanel
@@ -81,6 +85,16 @@
             this.HeaderPanel.TabIndex = 0;
             this.HeaderPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseDown);
             this.HeaderPanel.MouseMove += new System.Windows.Forms.MouseEventHandler(this.HeaderPanel_MouseMove);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
+            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
             // 
             // closeWindowButton
             // 
@@ -111,6 +125,7 @@
             // MenuPanel
             // 
             this.MenuPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.MenuPanel.Controls.Add(this.newsButton);
             this.MenuPanel.Controls.Add(this.aesKeyIcon);
             this.MenuPanel.Controls.Add(this.aboutButton);
             this.MenuPanel.Controls.Add(this.settingsButton);
@@ -121,6 +136,18 @@
             this.MenuPanel.Name = "MenuPanel";
             this.MenuPanel.Size = new System.Drawing.Size(44, 633);
             this.MenuPanel.TabIndex = 1;
+            // 
+            // newsButton
+            // 
+            this.newsButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.newsButton.FlatAppearance.BorderSize = 0;
+            this.newsButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.newsButton.Location = new System.Drawing.Point(1, 121);
+            this.newsButton.Name = "newsButton";
+            this.newsButton.Size = new System.Drawing.Size(43, 34);
+            this.newsButton.TabIndex = 5;
+            this.newsButton.UseVisualStyleBackColor = false;
+            this.newsButton.Click += new System.EventHandler(this.newsButton_Click);
             // 
             // aesKeyIcon
             // 
@@ -189,6 +216,7 @@
             // PanelSlide
             // 
             this.PanelSlide.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(42)))), ((int)(((byte)(42)))));
+            this.PanelSlide.Controls.Add(this.newsPanel);
             this.PanelSlide.Controls.Add(this.aboutPanel);
             this.PanelSlide.Controls.Add(this.settingsPanel);
             this.PanelSlide.Controls.Add(this.aesKeyPanel);
@@ -199,6 +227,27 @@
             this.PanelSlide.Name = "PanelSlide";
             this.PanelSlide.Size = new System.Drawing.Size(189, 633);
             this.PanelSlide.TabIndex = 2;
+            // 
+            // newsPanel
+            // 
+            this.newsPanel.Controls.Add(this.newsLabel);
+            this.newsPanel.Location = new System.Drawing.Point(0, 121);
+            this.newsPanel.Name = "newsPanel";
+            this.newsPanel.Size = new System.Drawing.Size(222, 34);
+            this.newsPanel.TabIndex = 4;
+            this.newsPanel.Click += new System.EventHandler(this.newsButton_Click);
+            // 
+            // newsLabel
+            // 
+            this.newsLabel.AutoSize = true;
+            this.newsLabel.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.newsLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.newsLabel.Location = new System.Drawing.Point(6, 4);
+            this.newsLabel.Name = "newsLabel";
+            this.newsLabel.Size = new System.Drawing.Size(127, 24);
+            this.newsLabel.TabIndex = 0;
+            this.newsLabel.Text = "Ingame-News";
+            this.newsLabel.Click += new System.EventHandler(this.newsButton_Click);
             // 
             // aboutPanel
             // 
@@ -313,34 +362,6 @@
             this.PanelContent.Size = new System.Drawing.Size(965, 633);
             this.PanelContent.TabIndex = 3;
             // 
-            // mainpanel
-            // 
-            this.mainpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mainpanel.Controls.Add(this.PanelContent);
-            this.mainpanel.Controls.Add(this.PanelSlide);
-            this.mainpanel.Controls.Add(this.MenuPanel);
-            this.mainpanel.Controls.Add(this.HeaderPanel);
-            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainpanel.Location = new System.Drawing.Point(0, 0);
-            this.mainpanel.Name = "mainpanel";
-            this.mainpanel.Size = new System.Drawing.Size(1200, 675);
-            this.mainpanel.TabIndex = 2;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 10;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.InitialImage = ((System.Drawing.Image)(resources.GetObject("pictureBox1.InitialImage")));
-            this.pictureBox1.Location = new System.Drawing.Point(0, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 40);
-            this.pictureBox1.TabIndex = 5;
-            this.pictureBox1.TabStop = false;
-            // 
             // aesKeys1
             // 
             this.aesKeys1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
@@ -359,6 +380,24 @@
             this.itemShop1.Size = new System.Drawing.Size(1156, 635);
             this.itemShop1.TabIndex = 0;
             // 
+            // mainpanel
+            // 
+            this.mainpanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.mainpanel.Controls.Add(this.PanelContent);
+            this.mainpanel.Controls.Add(this.PanelSlide);
+            this.mainpanel.Controls.Add(this.MenuPanel);
+            this.mainpanel.Controls.Add(this.HeaderPanel);
+            this.mainpanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainpanel.Location = new System.Drawing.Point(0, 0);
+            this.mainpanel.Name = "mainpanel";
+            this.mainpanel.Size = new System.Drawing.Size(1200, 675);
+            this.mainpanel.TabIndex = 2;
+            // 
+            // timer1
+            // 
+            this.timer1.Interval = 10;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -376,8 +415,11 @@
             this.Text = "BRL";
             this.HeaderPanel.ResumeLayout(false);
             this.HeaderPanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.MenuPanel.ResumeLayout(false);
             this.PanelSlide.ResumeLayout(false);
+            this.newsPanel.ResumeLayout(false);
+            this.newsPanel.PerformLayout();
             this.aboutPanel.ResumeLayout(false);
             this.aboutPanel.PerformLayout();
             this.settingsPanel.ResumeLayout(false);
@@ -390,7 +432,6 @@
             this.panel1.PerformLayout();
             this.PanelContent.ResumeLayout(false);
             this.mainpanel.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -423,6 +464,9 @@
         private System.Windows.Forms.Label settingsLabel;
         private System.Windows.Forms.Panel mainpanel;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button newsButton;
+        private System.Windows.Forms.Panel newsPanel;
+        private System.Windows.Forms.Label newsLabel;
     }
 }
 
