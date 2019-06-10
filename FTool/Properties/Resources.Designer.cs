@@ -63,6 +63,26 @@ namespace FTool.Properties {
         /// <summary>
         ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
         /// </summary>
+        internal static byte[] BurbankBigCondensed_Black {
+            get {
+                object obj = ResourceManager.GetObject("BurbankBigCondensed_Black", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
+        internal static byte[] CenturyGothic {
+            get {
+                object obj = ResourceManager.GetObject("CenturyGothic", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Byte[].
+        /// </summary>
         internal static byte[] ZipExtractor {
             get {
                 object obj = ResourceManager.GetObject("ZipExtractor", resourceCulture);

@@ -55,10 +55,12 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.menuLabel = new System.Windows.Forms.Label();
             this.PanelContent = new System.Windows.Forms.Panel();
-            this.aesKeys1 = new FTool.Pages.AesKeys();
-            this.itemShop1 = new FTool.Pages.ItemShop();
             this.mainpanel = new System.Windows.Forms.Panel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.closeTimer = new System.Windows.Forms.Timer(this.components);
+            this.newsPage1 = new FTool.Pages.NewsPage();
+            this.aesKeys1 = new FTool.Pages.AesKeys();
+            this.itemShop1 = new FTool.Pages.ItemShop();
             this.HeaderPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.MenuPanel.SuspendLayout();
@@ -113,7 +115,7 @@
             // FormLabel
             // 
             this.FormLabel.AutoSize = true;
-            this.FormLabel.Font = new System.Drawing.Font("Burbank Big Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FormLabel.Font = new System.Drawing.Font(BurbankBigCondensed, 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormLabel.Location = new System.Drawing.Point(38, 2);
             this.FormLabel.Name = "FormLabel";
             this.FormLabel.Size = new System.Drawing.Size(69, 36);
@@ -355,6 +357,7 @@
             // 
             // PanelContent
             // 
+            this.PanelContent.Controls.Add(this.newsPage1);
             this.PanelContent.Controls.Add(this.aesKeys1);
             this.PanelContent.Controls.Add(this.itemShop1);
             this.PanelContent.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -362,24 +365,6 @@
             this.PanelContent.Name = "PanelContent";
             this.PanelContent.Size = new System.Drawing.Size(965, 633);
             this.PanelContent.TabIndex = 3;
-            // 
-            // aesKeys1
-            // 
-            this.aesKeys1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.aesKeys1.Location = new System.Drawing.Point(0, 0);
-            this.aesKeys1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.aesKeys1.Name = "aesKeys1";
-            this.aesKeys1.Size = new System.Drawing.Size(1156, 635);
-            this.aesKeys1.TabIndex = 1;
-            // 
-            // itemShop1
-            // 
-            this.itemShop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
-            this.itemShop1.Location = new System.Drawing.Point(0, 0);
-            this.itemShop1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.itemShop1.Name = "itemShop1";
-            this.itemShop1.Size = new System.Drawing.Size(1156, 635);
-            this.itemShop1.TabIndex = 0;
             // 
             // mainpanel
             // 
@@ -398,6 +383,38 @@
             // 
             this.timer1.Interval = 10;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // closeTimer
+            // 
+            this.closeTimer.Interval = 1;
+            this.closeTimer.Tick += new System.EventHandler(this.closeTimer_Tick);
+            // 
+            // newsPage1
+            // 
+            this.newsPage1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.newsPage1.Location = new System.Drawing.Point(0, 0);
+            this.newsPage1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.newsPage1.Name = "newsPage1";
+            this.newsPage1.Size = new System.Drawing.Size(1156, 635);
+            this.newsPage1.TabIndex = 2;
+            // 
+            // aesKeys1
+            // 
+            this.aesKeys1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.aesKeys1.Location = new System.Drawing.Point(0, 0);
+            this.aesKeys1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.aesKeys1.Name = "aesKeys1";
+            this.aesKeys1.Size = new System.Drawing.Size(1156, 635);
+            this.aesKeys1.TabIndex = 1;
+            // 
+            // itemShop1
+            // 
+            this.itemShop1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.itemShop1.Location = new System.Drawing.Point(0, 0);
+            this.itemShop1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.itemShop1.Name = "itemShop1";
+            this.itemShop1.Size = new System.Drawing.Size(1156, 635);
+            this.itemShop1.TabIndex = 0;
             // 
             // Form1
             // 
@@ -468,6 +485,8 @@
         private System.Windows.Forms.Button newsButton;
         private System.Windows.Forms.Panel newsPanel;
         private System.Windows.Forms.Label newsLabel;
+        private Pages.NewsPage newsPage1;
+        private System.Windows.Forms.Timer closeTimer;
     }
 }
 

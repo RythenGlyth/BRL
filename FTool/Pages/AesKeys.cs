@@ -22,6 +22,9 @@ namespace FTool.Pages
         private void AesKeys_Load(object sender, EventArgs e)
         {
             setAesKeys();
+
+            this.Title.Font = new System.Drawing.Font(Form1.BurbankBigCondensed, 20.25F);
+            this.button1.Font = new System.Drawing.Font(Form1.CenturyGothic, 12F);
         }
 
         async private void setAesKeys()

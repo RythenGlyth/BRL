@@ -81,6 +81,12 @@ namespace FTool
 
         private void AboutDialog_Load(object sender, EventArgs e)
         {
+            this.label2.Font = new System.Drawing.Font(Form1.BurbankBigCondensed, 24F);
+            this.label_version.Font = new System.Drawing.Font(Form1.CenturyGothic, 12F);
+            this.label1.Font = new System.Drawing.Font(Form1.BurbankBigCondensed, 21.75F);
+            this.label4.Font = new System.Drawing.Font(Form1.CenturyGothic, 15.75F);
+            this.label3.Font = new System.Drawing.Font(Form1.CenturyGothic, 15.75F);
+            this.support_discord.Font = new System.Drawing.Font(Form1.BurbankBigCondensed, 20.25F);
             label_version.Text = "Version " + Assembly.GetEntryAssembly().GetName().Version.ToString();
         }
     }

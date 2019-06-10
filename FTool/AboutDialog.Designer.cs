@@ -90,7 +90,6 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Burbank Big Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(3, 1);
             this.label2.Name = "label2";
@@ -157,7 +156,6 @@
             this.support_discord.Dock = System.Windows.Forms.DockStyle.Fill;
             this.support_discord.FlatAppearance.BorderSize = 0;
             this.support_discord.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.support_discord.Font = new System.Drawing.Font("Burbank Big Condensed", 20.25F, System.Drawing.FontStyle.Bold);
             this.support_discord.ForeColor = System.Drawing.Color.White;
             this.support_discord.Location = new System.Drawing.Point(3, 3);
             this.support_discord.Name = "support_discord";
@@ -171,7 +169,6 @@
             // label_version
             // 
             this.label_version.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label_version.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label_version.ForeColor = System.Drawing.Color.White;
             this.label_version.Location = new System.Drawing.Point(3, 126);
             this.label_version.Name = "label_version";
@@ -192,7 +189,6 @@
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.label1.Font = new System.Drawing.Font("Burbank Big Condensed", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 0);
             this.label1.Name = "label1";
@@ -331,7 +327,6 @@
             // label4
             // 
             this.label4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label4.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(292, 0);
             this.label4.Name = "label4";
@@ -343,7 +338,6 @@
             // label3
             // 
             this.label3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label3.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(3, 0);
             this.label3.Name = "label3";

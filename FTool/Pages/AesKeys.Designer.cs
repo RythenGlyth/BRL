@@ -45,7 +45,6 @@ namespace FTool.Pages
             // Title
             // 
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Title.Font = new System.Drawing.Font("Burbank Big Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
             this.Title.Location = new System.Drawing.Point(0, 0);
             this.Title.Name = "Title";
@@ -121,7 +120,6 @@ namespace FTool.Pages
             this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatAppearance.BorderSize = 0;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";

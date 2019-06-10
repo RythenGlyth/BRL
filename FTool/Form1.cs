@@ -5,6 +5,7 @@ using System.Windows.Forms;
 using Newtonsoft.Json;
 using System.Net.Http;
 using System.Reflection;
+using System.Drawing.Text;
 
 namespace FTool
 {
@@ -13,8 +14,19 @@ namespace FTool
         int panelSlideWidth;
         bool panelSlideHidden;
 
+        [System.Runtime.InteropServices.DllImport("gdi32.dll")]
+        private static extern IntPtr AddFontMemResourceEx(IntPtr pbFont, uint cbFont,
+            IntPtr pdv, [System.Runtime.InteropServices.In] ref uint pcFonts);
+
+        private PrivateFontCollection fonts = new PrivateFontCollection();
+
+        public static FontFamily BurbankBigCondensed;
+        public static FontFamily CenturyGothic;
+
         public Form1()
         {
+            loadFonts();
+
             InitializeComponent();
             panelSlideWidth = PanelSlide.Width;
             PanelSlide.Width = 0;
@@ -22,6 +34,32 @@ namespace FTool
             itemShop1.BringToFront();
 
             update();
+        }
+
+        public void loadFonts()
+        {
+            {
+                byte[] fontData = Properties.Resources.BurbankBigCondensed_Black;
+                IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
+                System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
+                uint dummy = 0;
+                fonts.AddMemoryFont(fontPtr, Properties.Resources.BurbankBigCondensed_Black.Length);
+                AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.BurbankBigCondensed_Black.Length, IntPtr.Zero, ref dummy);
+                System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
+            }
+            {
+                byte[] fontData = Properties.Resources.CenturyGothic;
+                IntPtr fontPtr = System.Runtime.InteropServices.Marshal.AllocCoTaskMem(fontData.Length);
+                System.Runtime.InteropServices.Marshal.Copy(fontData, 0, fontPtr, fontData.Length);
+                uint dummy = 0;
+                fonts.AddMemoryFont(fontPtr, Properties.Resources.CenturyGothic.Length);
+                AddFontMemResourceEx(fontPtr, (uint)Properties.Resources.CenturyGothic.Length, IntPtr.Zero, ref dummy);
+                System.Runtime.InteropServices.Marshal.FreeCoTaskMem(fontPtr);
+            }
+
+
+            BurbankBigCondensed = fonts.Families[0];
+            CenturyGothic = fonts.Families[1];
         }
 
         async public void update()
@@ -113,11 +151,6 @@ namespace FTool
             }
         }
 
-        private void closeWindowButton_Click(object sender, EventArgs e)
-        {
-            Application.Exit();
-        }
-
         private void storeButton_Click(object sender, EventArgs e)
         {
             panelSlideHidden = false;
@@ -152,7 +185,26 @@ namespace FTool
         {
             panelSlideHidden = false;
             menuButton_Click(sender, e);
+            newsPage1.BringToFront();
+        }
 
+        private void closeWindowButton_Click(object sender, EventArgs e)
+        {
+            closeTimer.Start();
+        }
+
+        int exitInterval = 0;
+
+        private void closeTimer_Tick(object sender, EventArgs e)
+        {
+            exitInterval += 8;
+            if(exitInterval >= 200) Application.Exit();
+            Size size = this.ClientSize;
+            size.Width = size.Width - exitInterval;
+            size.Height = size.Height - exitInterval;
+            this.ClientSize = size;
+            this.Left = this.Left + exitInterval / 2;
+            this.Top = this.Top + exitInterval / 2;
         }
     }
 }

@@ -42,13 +42,13 @@ namespace FTool.Pages
             this.daily_label = new System.Windows.Forms.Label();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Title
             // 
             this.Title.Dock = System.Windows.Forms.DockStyle.Top;
-            this.Title.Font = new System.Drawing.Font("Burbank Big Condensed", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Title.ForeColor = System.Drawing.Color.White;
             this.Title.Location = new System.Drawing.Point(0, 0);
             this.Title.Name = "Title";
@@ -59,26 +59,31 @@ namespace FTool.Pages
             // 
             // dailyShop
             // 
-            this.dailyShop.AutoScroll = true;
             this.dailyShop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dailyShop.Location = new System.Drawing.Point(582, 62);
             this.dailyShop.Name = "dailyShop";
             this.dailyShop.Size = new System.Drawing.Size(567, 528);
             this.dailyShop.TabIndex = 3;
+            this.dailyShop.HorizontalScroll.Maximum = 0;
+            this.dailyShop.AutoScroll = false;
+            this.dailyShop.VerticalScroll.Visible = false;
+            this.dailyShop.AutoScroll = true;
             // 
             // featuredShop
             // 
-            this.featuredShop.AutoScroll = true;
             this.featuredShop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.featuredShop.Location = new System.Drawing.Point(7, 62);
             this.featuredShop.Name = "featuredShop";
             this.featuredShop.Size = new System.Drawing.Size(567, 528);
             this.featuredShop.TabIndex = 2;
+            this.featuredShop.HorizontalScroll.Maximum = 0;
+            this.featuredShop.AutoScroll = false;
+            this.featuredShop.VerticalScroll.Visible = false;
+            this.featuredShop.AutoScroll = true;
             // 
             // featured_label
             // 
             this.featured_label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.featured_label.Font = new System.Drawing.Font("Burbank Big Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.featured_label.ForeColor = System.Drawing.Color.White;
             this.featured_label.Location = new System.Drawing.Point(7, 4);
             this.featured_label.Name = "featured_label";
@@ -90,7 +95,6 @@ namespace FTool.Pages
             // daily_label
             // 
             this.daily_label.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.daily_label.Font = new System.Drawing.Font("Burbank Big Condensed", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.daily_label.ForeColor = System.Drawing.Color.White;
             this.daily_label.Location = new System.Drawing.Point(582, 4);
             this.daily_label.Name = "daily_label";
@@ -122,7 +126,6 @@ namespace FTool.Pages
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(0, 599);
             this.label1.Name = "label1";
@@ -131,13 +134,22 @@ namespace FTool.Pages
             this.label1.Text = "Support A Creator: Toastyy_Twitch";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // panel1
+            // 
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel1.Location = new System.Drawing.Point(0, 38);
+            this.panel1.Name = "panel1";
+            this.panel1.Controls.Add(this.tableLayoutPanel1);
+            this.panel1.Size = new System.Drawing.Size(1156, 561);
+            this.panel1.TabIndex = 4;
+            // 
             // ItemShop
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(31)))), ((int)(((byte)(31)))));
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.tableLayoutPanel1);
             this.Controls.Add(this.Title);
             this.Name = "ItemShop";
             this.Size = new System.Drawing.Size(1156, 635);
@@ -156,5 +168,6 @@ namespace FTool.Pages
         private System.Windows.Forms.Label daily_label;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel1;
     }
 }
